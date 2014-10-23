@@ -1,0 +1,172 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link href="../../App_Themes/Builtin/Default.css" type="text/css" rel="stylesheet" /><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+	黃金牌價通告匯率
+</title>
+  <style type="text/css">
+    .goldName0 { width:120px;text-align:left; }
+    .goldName1 { width:88px;text-align:left; }
+    td.selling { width:100px; }
+    td.zeroDpDiff { background-color:#dcdcdc;font-family: Arial;font-size: 9pt;text-align: right;padding-right: 2px;}
+    img.picsize   {height:50px; width:50px;vertical-align:middle;border-width:0px;}
+    a.note    {color:Red; text-decoration:underline;}
+    a.note_b    {color:#000000; text-decoration:underline;}
+  </style>
+</head>
+<body>
+  <div id="TopBanner1_BG">
+<table style="width:700px;text-align:center;" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	  <td style="width:400px;"><img src="../../Images/Logo/1/Top_A01.gif" id="TopBanner1_Img1" alt="臺灣銀行logo" title="臺灣銀行logo" /></td>
+	  <td style="width:300px;background-image:url(/Images/Logo/1/TopBG.gif)" ></td>
+	</tr>
+	<tr style="height:12px;">
+	  <td style="width:152px;" colspan="2"><img src="../../Images/Logo/1/Top_B01.gif" id="TopBanner1_Img3" alt=" " /></td>
+	  <td></td>
+	</tr>
+</table>
+</div>
+  
+  <form name="form1" method="post" action="UIP005.aspx?Static=build" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTk5NzA0Nzc2NA9kFgICBw9kFhZmDxYCHgRUZXh0BeMBPHNwYW4gY2xhc3M9J3BhZ2VUaXRsZSc+5Yip546H5Yyv546HLzwvc3Bhbj48c3BhbiBjbGFzcz0ncGFnZVRpdGxlJyBzdHlsZT0nY29sb3I6Qmx1ZSc+MjAxNC8xMC8yMzwvc3Bhbj48c3BhbiBjbGFzcz0ncGFnZVRpdGxlJyBzdHlsZT0nY29sb3I6UmVkJz7nm6TlvozkuqTmmJM8L3NwYW4+PHNwYW4gY2xhc3M9J3BhZ2VUaXRsZScgc3R5bGU9J2NvbG9yOkJsdWUnPum7g+mHkeeJjOWDuTwvc3Bhbj5kAgEPZBYCZg9kFgJmDw8WAh4HVmlzaWJsZWdkZAICDw9kFgIeBWNsYXNzBQxidXR0b25fMTMwcHhkAgMPDxYEHgtOYXZpZ2F0ZVVybAU0aHR0cDovL3JhdGUuYm90LmNvbS50dy9QYWdlcy9TdGF0aWMvT0JVMDA1LnpoLVRXLmh0bR8BZxYCHwIFDGJ1dHRvbl8xMzBweGQCBA8WAh8CBQxidXR0b25fMTMwcHhkAgUPD2QWAh8CBQxidXR0b25fMTMwcHhkAgYPDxYEHwMFPmh0dHA6Ly9yYXRlLmJvdC5jb20udHcvUGFnZXMvVUlQMDA1L1VJUDAwNUlOUTEuYXNweD9sYW5nPXpoLVRXHwFnFgIfAgUMYnV0dG9uXzEzMHB4ZAIHDw8WBB8DBT5odHRwOi8vcmF0ZS5ib3QuY29tLnR3L1BhZ2VzL1VJUDAwNS9VSVAwMDVJTlE0LmFzcHg/bGFuZz16aC1UVx8BZxYCHwIFDGJ1dHRvbl8xMzBweGQCCw9kFgJmDxYCHwAF+gI8dGFibGUgdGl0bGU9IuaWsOWPsOW5o+m7g+mHkeeJjOWDuSIgc3VtbWFyeT0i5q2k6KGo5qC85piv5paw5Y+w5bmj6buD6YeR54mM5YO577yM55Sx5LiD5YCL5bCP6KGo5qC857WE5oiQ77yM5YiG5Yil5piv6buD6YeR5a2Y5pG644CB6buD6YeR5qKd5aGK44CB6Ie66YqA6YeR6ZG95qKd5aGK44CB5bm75b2p5qKd5aGK44CB6YeR5bmj44CB6YqA5bmj5Y+K55m86LKo5Zau44CC5q2k6KGo5qC854K66buD6YeR5a2Y5pG66KGo5qC877yM5pyJ5Lmd55u05qyE77yM56ys5LiA55u05qyE5piv5ZOB5ZCN77yM56ys5LqM55u05qyE5piv6LK36LOj5Yil77yM56ys5LiJ6Iez5YWr55u05qyE54Sh6LOH5paZ77yM56ys5Lmd55u05qyE5piv5LiA5YWs5YWL6YeR6aGN44CCIj5kAg8PFgIfAWhkAhEPZBYCAgMPFgIeBGhyZWYFKX4vSGVscHMvTGFuZHNjYXBlUHJpbnQvRGVmYXVsdC56aC1UVy5hc3B4ZGSBGjF8SN94A8P8tA+qkRSEPGI1Mw==" />
+
+    <ul>
+      <li class="top"/>
+      <li class="middle">
+      <center>
+        <table>
+          <tr><td class="pageTitle"><span class='pageTitle'>利率匯率/</span><span class='pageTitle' style='color:Blue'>2014/10/23</span><span class='pageTitle' style='color:Red'>盤後交易</span><span class='pageTitle' style='color:Blue'>黃金牌價</span></td></tr>
+          <tr id="TrRateNote">
+	<td>
+            <table>
+              <tr>
+                
+                <td valign="top"><iframe name="AD1" src="https://emarketing.bot.com.tw/output/bulletin.ashx?type=00180" frameborder="0" scrolling="no" height="185px" style="  margin-top:-10px;  font-size:x-large; padding-top:2px; width: 680px;" title="注意事項"> </iframe></td>
+              </tr>
+              <tr>
+                <td valign="top" style="text-align:left ; margin-top:auto">
+                   <a id="rateadlink" href="../../Pages/Static/rateadlink.html" target="_blank">廣宣說明</a>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" style="text-align:left ; margin-top:auto ">
+                  <iframe name="AD1" src="https://emarketing.bot.com.tw/output/vi.aspx?type=010&lang=" frameborder="0" scrolling="no" width="150" height="90" style="padding-left:5px" title="廣告一"></iframe>
+                  <iframe name="AD2" src="https://emarketing.bot.com.tw/output/vi.aspx?type=011&lang=" frameborder="0" scrolling="no" width="150" height="90" style="padding-left:5px" title="廣告二"></iframe>
+                  <iframe name="AD3" src="https://emarketing.bot.com.tw/output/vi.aspx?type=00050&lang=" frameborder="0" scrolling="no" width="150" height="90" style="padding-left:5px" title="廣告三"></iframe> 
+                  <iframe name="AD4" src="https://emarketing.bot.com.tw/output/vi.aspx?type=00087&lang=" frameborder="0" scrolling="no" width="150" height="90" style="padding-left:5px" title="廣告四"></iframe> <!--style="padding-left:15px"-->
+                </td>
+              </tr>
+            </table>
+          </td>
+</tr>
+
+          <tr><td align="right">
+          <div style="width:710px;">
+          
+             <table style="width: auto; float: right;" >
+              <tr>
+                <td></td>
+                <td><a id="ButtonUSD" class="buttonLink" class="button_130px" href="http://rate.bot.com.tw/Pages/Static/OBU005.zh-TW.htm">美元計價黃金存摺牌價</a></td>
+                <td><input name="Refresh" type="button" id="Refresh" onmouseout="this.style.color='';" value="取得最新黃金牌價" class="button_130px" onmouseover="this.style.color='red';" onclick="location.reload();" onblur="this.style.color='';" onkeypress="" onfocus="this.style.color='red';" /></td>
+                <td><a id="Button4" class=" buttonLink" class="button_130px" href="https://ebank.bot.com.tw/NNBank/Default.asp?ITmTm=1220493464401" target="_blank">網路銀行</a></td>
+                </tr>
+             </table>  
+             <table style="width: auto; float: right;" >
+              <tr>
+                <td><a id="ButtonHisGold" class=" buttonLink" class="button_130px" href="http://rate.bot.com.tw/Pages/UIP005/UIP005INQ1.aspx?lang=zh-TW">歷史黃金牌價</a></td>
+                <td><a id="ButtonHisGoldBook" class="buttonLink" class="button_130px" href="http://rate.bot.com.tw/Pages/UIP005/UIP005INQ4.aspx?lang=zh-TW">歷史黃金存摺牌價</a></td>
+                </tr>
+             </table> 
+          </div>
+             <noscript><div style="clear:both" ><br />取得新報價請按F5</div></noscript>
+             
+          </td></tr>
+        </table>
+        <!-- IE8 Web Slice Start-->
+        <div id="slice1" class="hslice">
+          <div class="entry-title" style="display:none;">臺灣銀行-黃金牌價</div>
+          <div class="entry-content">
+            <table>
+              <tr>
+                 <td>
+
+<img src="../../Images/WebSliceLogo.jpg" alt=" " /></td>
+                 <td width="150px">
+<table  style="width:326px;margin-bottom:2px;margin-left:16px;float:left;" border="0" cellpadding="0" cellspacing="0">
+  <tr style="height:20px;vertical-align:text-bottom;">
+    <td style="width:326px;text-align:left;vertical-align:top;color:#0000FF;font-size:11pt;font-weight:bold;">
+      <img style="vertical-align:middle;width:20px;" src="../../Images/Monitor.gif" alt=" " />&nbsp;
+      
+      掛牌時間：&nbsp;2014/10/23 19:49
+    </td>
+    
+  </tr>
+</table></td>
+              </tr>
+            </table>
+            <div id="GoldBankBookForTWD">
+              <table title="新台幣黃金牌價" summary="此表格是新台幣黃金牌價，由七個小表格組成，分別是黃金存摺、黃金條塊、臺銀金鑽條塊、幻彩條塊、金幣、銀幣及發貨單。此表格為黃金存摺表格，有九直欄，第一直欄是品名，第二直欄是買賣別，第三至八直欄無資料，第九直欄是一公克金額。">
+                <tr>
+                  <th class="title" scope="colgroup" colspan="2" rowspan="2" style="text-align:center;">品名 / 規格</th>
+                  <th class="title" scope="colgroup" colspan="7">單位：新臺幣元</th>
+                </tr>
+			    <tr>
+                  <th class="title" scope="col" style="width:60px;"></th>
+                  <th class="title" scope="col" style="width:60px;"></th>
+                  <th class="title" scope="col" style="width:60px;"></th>
+                  <th class="title" scope="col" style="width:60px;"></th>
+                  <th class="title" scope="col" style="width:60px;"></th>
+                  <th class="title" scope="col" style="width:60px;"></th>
+                  <th class="title" scope="col" style="width:60px;">1 公克</th>
+			    </tr>
+			    <tr class="color0"><td rowspan="2" class="goldName0">黃金存摺</td><td class="title selling" style="width:88px;">本行賣出</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">1215</td></tr><tr class="color0"><td class="title selling" style="width:88px;">本行買進</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">-</td><td class="decimal">1197</td></tr>
+			  </table><br/>
+			</div>
+            
+			
+			
+		    </div>
+        </div>
+        <!-- IE8 Web Slice End-->
+        
+        
+          
+           
+        <p />
+        	<table style="width: auto;">
+            <tr>
+                <td><a id="Button3" class=" buttonLongLink" href="https://www.bot.com.tw/orderS/coinOrder_List.asp" target="_blank">其他紀念幣及套幣訂購</a></td>
+                <td><input name="Button1" type="button" id="Button1" onmouseout="this.style.color='';" value="列印本頁" class="button" onmouseover="this.style.color='red';" onclick="window.print();" onblur="this.style.color='';" onkeypress="" onfocus="this.style.color='red';" /></td>
+                <td></td>
+                <td><input name="Button5" type="button" id="Button5" onmouseout="this.style.color='';" value="關閉本頁" class="button" onmouseover="this.style.color='red';" onclick="window.close();" onblur="this.style.color='';" onkeypress="" onfocus="this.style.color='red';" /></td>
+                </tr>
+            </table>
+        <noscript>
+            <ul style="text-align:left; padding-left:3em;">
+                <li>列印本頁請按Ctrl + P</li> 
+                <li>返回上頁請按Backspace鍵或Alt + 向左鍵</li>
+                <li>關閉本頁請按Ctrl + W</li>               
+            </ul>
+        </noscript>
+        <p />
+        
+<table>
+	<tr>
+	  <td style="text-align:center;">
+      本張網頁需要指定印表機橫印才能輸出完整內容，設定方式請參閱
+      <a href="../../Helps/LandscapePrint/Default.zh-TW.aspx" id="LandscapePrintHint1_Href1" target="_blank"><img src="../../Images/Buttons/Help6.gif" id="LandscapePrintHint1_Img1" style="border:0px;margin-right:2px;vertical-align:middle;" alt=" " />印表機橫印設定說明</a>
+    </td>
+  </tr>
+</table>
+   
+
+      </center>
+      </li>
+      <li class="bottom"/>
+    </ul>
+  
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAK7sYf/BALJ7MGQAwKM54rGBgKgwpPxDQuvFCmxO5Yh+9wC828M/AFOcTrb" /></form>
+</body>
+</html>
