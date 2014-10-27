@@ -9,6 +9,6 @@
 因為銀行週末休息，所以不更新紀錄。
 
 ## API
-```GET http://rate.bot.com.tw/Pages/UIP005/UIP00511.aspx?whom=GB0030001000&afterOrNot=0&curcd=TWD&date=2000101```
+```GET http://rate.bot.com.tw/Pages/UIP005/UIP00511.aspx?whom=GB0030001000&afterOrNot=0&curcd=TWD&date=20000101```
 
 只需變換 **date** 參數。
