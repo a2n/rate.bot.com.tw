@@ -8,38 +8,43 @@ import (
 	"os"
 	"strings"
 	"time"
-	//"runtime"
+	"runtime"
+	"sort"
 	"code.google.com/p/go.net/html"
 )
 
 func get(date string) string {
 	if len(date) == 0 {
-		log.Println("get url error, empty date.")
+		log.Println("get url has error, empty date.")
 		return ""
 	}
-	url := fmt.Sprintf("http://rate.bot.com.tw/Pages/UIP005/UIP00511.aspx?whom=GB0030001000&date=%s&afterOrNot=0&curcd=TWD", date)
+	url := fmt.Sprintf("http://rate.bot.com.tw/Pages/UIP005/UIP00511.aspx?whom=GB0030001000&afterOrNot=0&curcd=TWD&date=%s", date)
 	resp, err := http.DefaultClient.Get(url)
 	if err != nil {
-		log.Printf("get url err, %s", err)
+		log.Printf("get url has error, %s", err)
 		return ""
 	}
 
 	b, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Printf("get url err, %s", err)
+		log.Printf("get url has error, %s", err)
 		return ""
 	}
 
 	return string(b)
 }
 
-func testGet() string {
-	path := "../data/history.html"
+func getLocal(date string) string {
+	if len(date) == 0 {
+		return ""
+	}
+
+	path := fmt.Sprintf("../data/%s", date)
 	fh, err := os.Open(path)
 	defer fh.Close()
 
 	if os.IsNotExist(err) {
-		log.Fatalln("testGet has eror, testing data not found.\n")
+		log.Fatalf("getLocal() has error, the file %s is not found.\n", date)
 		return ""
 	}
 
@@ -55,6 +60,20 @@ type Record struct {
 	Date time.Time
 	Buy float32
 	Sell float32
+}
+
+type ByDate []Record
+
+func (d ByDate) Len() int {
+	return len(d)
+}
+
+func (d ByDate) Swap(i, j int) {
+	d[i], d[j] = d[j], d[i]
+}
+
+func (d ByDate) Less(i, j int) bool {
+	return d[i].Date.Before(d[j].Date)
 }
 
 type Parser struct {
@@ -182,31 +201,43 @@ func (p *Parser) getRecord(node *html.Node, date time.Time) Record {
 }
 
 func main() {
-	str := testGet()
-	parser := NewParser(str)
-	for _, record := range parser.parse() {
-		date := record.Date
-		str := fmt.Sprintf("%04d/%02d/%02d %02d:%02d", date.Year(), date.Month(), date.Day, date.Hour(), date.Minute())
-		log.Printf("%s, buy: %.0f, sell: %.0f\n", str, record.Buy, record.Sell)
-	}
-
-	/*
 	NCPU := runtime.NumCPU()
 	runtime.GOMAXPROCS(NCPU)
-	const MAX = 100000
 	ch := make(chan string, NCPU)
-	for i := 0; i < MAX; i++ {
-		go func() {
-			ch <- testGet()
-		}()
+	date := time.Date(2014, time.Month(10), 1, 0, 0, 0, 0, time.UTC)
+	validDate := 0
+	for i := 0; i < 9; i++ {
+		if date.Weekday() != time.Saturday && date.Weekday() != time.Sunday {
+			str := fmt.Sprintf("%04d%02d%02d", date.Year(), date.Month(), date.Day())
+			go func(date string) {
+				ch <- getLocal(str)
+			}(str)
+			validDate++
+		}
+		date = date.Add(time.Duration(24) * time.Hour)
 	}
 
-	slice := make([]string, 0)
-	for i := 0; i < MAX; i++ {
-		if str := <-ch; str != "" {
-			parse(str)
+	slice := make([]Record, 0)
+	for i := 0; i < validDate; i++ {
+		str := <-ch
+		for _, record := range NewParser(str).parse() {
+			slice = append(slice, record)
 		}
 	}
-	log.Printf("cap(slice): %d\n", cap(slice))
-	*/
+	sort.Sort(ByDate(slice))
+
+	// Write
+	str := ""
+	for _, record := range slice {
+		str = fmt.Sprintf("%s%d,%.0f,%.0f\n", str, record.Date.Unix(), record.Buy, record.Sell)
+	}
+
+	fh, err := os.Create("records")
+	if err != nil {
+		log.Fatalf("create recrods.csv has error, %s\n", err)
+	}
+	_, err = fh.WriteString(str)
+	if err != nil {
+		log.Fatalf("write file has error, %s", err)
+	}
 }
