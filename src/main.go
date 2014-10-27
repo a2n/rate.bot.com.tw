@@ -232,7 +232,7 @@ func main() {
 		str = fmt.Sprintf("%s%d,%.0f,%.0f\n", str, record.Date.Unix(), record.Buy, record.Sell)
 	}
 
-	fh, err := os.Create("records")
+	fh, err := os.Create("records.csv")
 	if err != nil {
 		log.Fatalf("create recrods.csv has error, %s\n", err)
 	}
