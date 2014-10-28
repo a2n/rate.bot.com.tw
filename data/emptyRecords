@@ -28,7 +28,7 @@
       <table>
         <tr>
           <th class="title" style="width:10%" scope="col">資料日期</th>
-          <td class="title" style="width:23%">2014/10/17</td>
+          <td class="title" style="width:23%">2000/01/01</td>
           <th class="title" style="width:10%" scope="col">查詢幣別</th>
           <td class="title" style="width:23%">新臺幣 (TWD)</td>          
           <th class="title" style="width:10%" scope="col">查詢項目</th>
@@ -68,13 +68,9 @@ x.addVariable("y_legend","RATE,12,#736AFF");
 x.addVariable("y_label_size","9");
 x.addVariable("x_axis_steps","1");
 x.addVariable("y_axis_steps","1");
-x.addVariable("line","3,#FFB300,本行賣出,12,0");
-x.addVariable("values","1217,1218,1216,1218,1217,1218,1219,1218");
-x.addVariable("line_hollow_2","3,#849BBB,本行買入,12,2");
-x.addVariable("values_2","1202,1203,1201,1203,1202,1203,1204,1203");
-x.addVariable("x_labels","08:40,09:15,09:40,11:15,12:20,14:00,14:10,14:40");
-x.addVariable("y_min","1201");
-x.addVariable("y_max","1219");
+x.addVariable("x_labels","");
+x.addVariable("y_min","0");
+x.addVariable("y_max","100");
 x.addVariable("tool_tip","#x_label#<br>#key# #val#");
 x.write("TimeTrend_Swf");
 }
@@ -96,14 +92,7 @@ showTimeTrend_SwfChart();
           <th class="title" style="width:20%;" scope="col">本行買入價格</th>
           <th class="title" style="width:20%;" scope="col">本行賣出價格</th>
         </tr>
-        <tr class="color0"><td class="title">08:40</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1202</td><td class="decimal">1217</td></tr>
-<tr class="color1"><td class="title">09:15</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1203</td><td class="decimal">1218</td></tr>
-<tr class="color0"><td class="title">09:40</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1201</td><td class="decimal">1216</td></tr>
-<tr class="color1"><td class="title">11:15</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1203</td><td class="decimal">1218</td></tr>
-<tr class="color0"><td class="title">12:20</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1202</td><td class="decimal">1217</td></tr>
-<tr class="color1"><td class="title">14:00</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1203</td><td class="decimal">1218</td></tr>
-<tr class="color0"><td class="title">14:10</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1204</td><td class="decimal">1219</td></tr>
-<tr class="color1"><td class="title">14:40</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1203</td><td class="decimal">1218</td></tr>
+        <tr class="color0"><td class="alertMessage" colspan="10">很抱歉，本次查詢找不到任何一筆資料！</td></tr>
 
       </table>  
       

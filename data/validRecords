@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link href="../../App_Themes/Builtin/Default.css" type="text/css" rel="stylesheet" /><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+	歷史黃金存摺牌價（單日內所有時間）
+</title></head>
+<body>
+  <div id="topBanner1_BG">
+<table style="width:700px;text-align:center;" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	  <td style="width:400px;"><img src="../../Images/Logo/1/Top_A01.gif" id="topBanner1_Img1" alt="臺灣銀行Logo" title="臺灣銀行Logo" /></td>
+	  <td style="width:300px;background-image:url(/Images/Logo/1/TopBG.gif)" ></td>
+	</tr>
+	<tr style="height:12px;">
+	  <td style="width:152px;" colspan="2"><img src="../../Images/Logo/1/Top_B01.gif" id="topBanner1_Img3" alt=" " /></td>
+	  <td></td>
+	</tr>
+</table>
+</div>
+  <ul>
+    <li class="top"/>
+    <li class="middle">
+      <center>
+      <table>
+        <tr><td class="pageTitle">利率匯率/歷史營業時間黃金存摺牌價</td></tr>
+      </table>
+      <table>
+        <tr>
+          <th class="title" style="width:10%" scope="col">資料日期</th>
+          <td class="title" style="width:23%">2014/10/01</td>
+          <th class="title" style="width:10%" scope="col">查詢幣別</th>
+          <td class="title" style="width:23%">新臺幣 (TWD)</td>          
+          <th class="title" style="width:10%" scope="col">查詢項目</th>
+          <td class="title" style="width:23%">營業時間黃金存摺牌價</td>          
+        </tr>
+      </table>
+      <table>
+        <tr><td style="text-align:left;">
+<p class="line" style="padding-left:8px;">若您尚未安裝 Adobe Flash，網頁將無法顯示匯利率走勢圖。</p>
+<p class="line" style="padding-left:8px;">
+  請手動下載安裝&nbsp;
+  <a id="FlashDownloadHint1_HyperLink1" href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&amp;promoid=BONRN" onclick="return confirm('提醒您！\n您即將離開臺灣銀行網站，前往由其他業者所經營及負責之網站，其內容（包括客戶隱私權保護及客戶資訊安全事項）均由該業者自行負責，您若已知悉並同意繼續請選擇「確定」，不同意請選擇「取消」');" onkeypress="" target="_blank">Adobe Flash</a>&nbsp;&nbsp;
+  <a href="../../Controls/FlashDownloadHint/Default.zh-TW.aspx" id="FlashDownloadHint1_Href1" target="_blank"><img src="../../Images/Buttons/Help6.gif" id="FlashDownloadHint1_Img1" style="border:0px;margin-right:2px;vertical-align:middle;" alt="安裝說明" />安裝說明</a>
+</p></td></tr>
+        <tr><td class="title">歷史牌價</td></tr>
+        <tr><td><div id="TimeTrend_Swf" style="overflow:auto;text-align:center;width:704px;height:320px;"></div>
+<script type="text/javascript" src="/Controls/LineTrendChart/SWFObject.js"></script>
+<noscript>抱歉!您的瀏覽器不支援JavaScript語法,但是並不影響您讀取本網站的內容，您可讀取下列表格式資料</noscript>
+<script type="text/javascript">
+function showTimeTrend_SwfChart() {
+var x = new SWFObject("/Controls/LineTrendChart/OpenFlashChart.swf","TimeTrend_SwfOfc","704px","100%","9","#FFFFFF");
+x.addParam("quality","high");
+x.addParam("allowScriptAccess","always");
+x.addVariable("variables","true");
+x.addVariable("bg_colour","#F8F8D8");
+x.addVariable("x_axis_colour","#784016");
+x.addVariable("x_grid_colour","#F0F0F0");
+x.addVariable("y_axis_colour","#784016");
+x.addVariable("y_grid_colour","#F0F0F0");
+x.addVariable("inner_background","#FAFAE4,#EBEB92,90");
+x.addVariable("num_decimals","2");
+x.addVariable("is_fixed_num_decimals_forced","true");
+x.addVariable("y_ticks","5,8,10");
+x.addVariable("x_label_style","0,#303030,2");
+x.addVariable("x_legend","TIME,12,#736AFF");
+x.addVariable("y_legend","RATE,12,#736AFF");
+x.addVariable("y_label_size","9");
+x.addVariable("x_axis_steps","1");
+x.addVariable("y_axis_steps","1");
+x.addVariable("line","3,#FFB300,本行賣出,12,0");
+x.addVariable("values","1190,1193,1191,1190,1191,1190,1191");
+x.addVariable("line_hollow_2","3,#849BBB,本行買入,12,2");
+x.addVariable("values_2","1176,1179,1177,1176,1177,1176,1177");
+x.addVariable("x_labels","08:40,09:15,09:30,10:20,11:00,11:20,12:25");
+x.addVariable("y_min","1176");
+x.addVariable("y_max","1193");
+x.addVariable("tool_tip","#x_label#<br>#key# #val#");
+x.write("TimeTrend_Swf");
+}
+showTimeTrend_SwfChart();
+</script>
+<noscript>抱歉!您的瀏覽器不支援JavaScript語法,但是並不影響您讀取本網站的內容，您可讀取下列表格式資料</noscript>
+</td></tr>
+      </table>
+      <table>
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <table title="歷史營業時間黃金存摺牌價" summary="此表格是歷史營業時間黃金存摺牌價，表格分為五直欄，第一直欄是時間，第二直欄是牌價幣別，第三直欄是商品重量，第四直欄是本行買入價格，第五直欄是本行賣出價格。">
+        <tr>
+          <th class="title" style="width:15%;" scope="col">時間</th>
+          <th class="title" style="width:30%;" scope="col">牌價幣別</th>
+          <th class="title" style="width:15%;" scope="col">商品重量</th>
+          <th class="title" style="width:20%;" scope="col">本行買入價格</th>
+          <th class="title" style="width:20%;" scope="col">本行賣出價格</th>
+        </tr>
+        <tr class="color0"><td class="title">08:40</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1176</td><td class="decimal">1190</td></tr>
+<tr class="color1"><td class="title">09:15</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1179</td><td class="decimal">1193</td></tr>
+<tr class="color0"><td class="title">09:30</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1177</td><td class="decimal">1191</td></tr>
+<tr class="color1"><td class="title">10:20</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1176</td><td class="decimal">1190</td></tr>
+<tr class="color0"><td class="title">11:00</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1177</td><td class="decimal">1191</td></tr>
+<tr class="color1"><td class="title">11:20</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1176</td><td class="decimal">1190</td></tr>
+<tr class="color0"><td class="title">12:25</td><td class="title">新臺幣 (TWD)</td><td class="title">1 公克</td><td class="decimal">1177</td><td class="decimal">1191</td></tr>
+
+      </table>  
+      
+      <p>
+        <input name="ctl01" type="button" onmouseout="this.style.color='';" value="返回上頁" class="button" onmouseover="this.style.color='red';" onclick="history.back();" onblur="this.style.color='';" onkeypress="" onfocus="this.style.color='red';" />&nbsp;
+        <input name="ctl02" type="button" onmouseout="this.style.color='';" value="列印本頁" class="button" onmouseover="this.style.color='red';" onclick="window.print();" onblur="this.style.color='';" onkeypress="" onfocus="this.style.color='red';" />
+      </p>
+       <noscript>
+            <ul style="text-align:left; padding-left:3em;">
+                <li>返回上頁請按Backspace鍵或Alt + 向左鍵</li>
+                <li>列印本頁請按Ctrl + P</li> 
+            </ul>
+        </noscript>
+      
+<table>
+	<tr>
+	  <td style="text-align:center;">
+      本張網頁需要指定印表機橫印才能輸出完整內容，設定方式請參閱
+      <a href="../../Helps/LandscapePrint/Default.zh-TW.aspx" id="LandscapePrintHint1_Href1" target="_blank"><img src="../../Images/Buttons/Help6.gif" id="LandscapePrintHint1_Img1" style="border:0px;margin-right:2px;vertical-align:middle;" alt=" " />印表機橫印設定說明</a>
+    </td>
+  </tr>
+</table>
+   
+
+      </center>
+    </li>
+    <li class="bottom"/>
+  </ul>
+</body>
+</html>
