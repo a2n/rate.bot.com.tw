@@ -60,13 +60,17 @@ func main() {
 	runtime.GOMAXPROCS(NCPU)
 	ch := make(chan string, math.MaxUint16)
 
-	date := time.Date(2013, time.Month(1), 1, 0, 0, 0, 0, time.UTC)
-	max := 5
+	date := time.Date(2000, time.Month(1), 1, 0, 0, 0, 0, time.UTC)
+	max := math.MaxUint16
 	for i := 0; i < max; i++ {
 		str := fmt.Sprintf("%04d%02d%02d", date.Year(), date.Month(), date.Day())
-		ch <- get(str)
-		date = date.Add(time.Duration(24) *	time.Hour)
 		log.Printf("Getting %s\n", str)
+		ch <- get(str)
+		date = date.Add(time.Duration(24) * time.Hour)
+		if date.After(time.Now()) {
+		    close(ch)
+		    break
+		}
 		//ch <- getLocal("validRecords")
 		//ch <- getLocal("emptyRecords")
 	}
@@ -74,6 +78,9 @@ func main() {
 	slice := make([]botGoldPrice.Record, 0)
 	for i := 0; i < max; i++ {
 		str := <-ch
+		if len(str) == 0 {
+		    break
+		}
 		records := botGoldPrice.NewParser(str).Parse()
 		slice = append(slice, records...)
 	}
