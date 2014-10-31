@@ -17,4 +17,16 @@ func TestParser(t *testing.T) {
 	} else {
 		t.Log("Empty record... passed.\n")
 	}
+
+	path = "../../data/validRecords"
+	b, err = ioutil.ReadFile(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	slice = NewParser(string(b)).Parse()
+	if len(slice) == 0 {
+		t.Error("Valid record... failed.\n")
+	} else {
+		t.Log("Valid record... passed.\n")
+	}
 }

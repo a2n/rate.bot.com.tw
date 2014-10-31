@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"io/ioutil"
 	"os"
-	"time"
 	"runtime"
-	"sort"
+	"time"
+	"math"
 	"botGoldPrice"
 )
 
@@ -33,17 +33,17 @@ func get(date string) string {
 	return string(b)
 }
 
-func getLocal(date string) string {
-	if len(date) == 0 {
+func getLocal(fileName string) string {
+	if len(fileName) == 0 {
 		return ""
 	}
 
-	path := fmt.Sprintf("../data/%s", date)
+	path := fmt.Sprintf("../data/%s", fileName)
 	fh, err := os.Open(path)
 	defer fh.Close()
 
 	if os.IsNotExist(err) {
-		log.Fatalf("getLocal() has error, the file %s is not found.\n", date)
+		log.Fatalf("getLocal() has error, %s\n", fileName, err)
 		return ""
 	}
 
@@ -58,41 +58,42 @@ func getLocal(date string) string {
 func main() {
 	NCPU := runtime.NumCPU()
 	runtime.GOMAXPROCS(NCPU)
-	ch := make(chan string, NCPU)
-	date := time.Date(2014, time.Month(10), 1, 0, 0, 0, 0, time.UTC)
-	validDate := 0
-	for i := 0; i < 9; i++ {
-		if date.Weekday() != time.Saturday && date.Weekday() != time.Sunday {
-			str := fmt.Sprintf("%04d%02d%02d", date.Year(), date.Month(), date.Day())
-			go func(date string) {
-				ch <- getLocal(str)
-			}(str)
-			validDate++
-		}
-		date = date.Add(time.Duration(24) * time.Hour)
+	ch := make(chan string, math.MaxUint16)
+
+	date := time.Date(2013, time.Month(1), 1, 0, 0, 0, 0, time.UTC)
+	max := 5
+	for i := 0; i < max; i++ {
+		str := fmt.Sprintf("%04d%02d%02d", date.Year(), date.Month(), date.Day())
+		ch <- get(str)
+		date = date.Add(time.Duration(24) *	time.Hour)
+		log.Printf("Getting %s\n", str)
+		//ch <- getLocal("validRecords")
+		//ch <- getLocal("emptyRecords")
 	}
 
 	slice := make([]botGoldPrice.Record, 0)
-	for i := 0; i < validDate; i++ {
+	for i := 0; i < max; i++ {
 		str := <-ch
-		for _, record := range botGoldPrice.NewParser(str).Parse() {
-			slice = append(slice, record)
-		}
+		records := botGoldPrice.NewParser(str).Parse()
+		slice = append(slice, records...)
 	}
-	sort.Sort(botGoldPrice.ByDate(slice))
+	log.Printf("count: %d\n", len(slice))
 
-	// Write
+	// Writing
 	str := ""
 	for _, record := range slice {
 		str = fmt.Sprintf("%s%d,%.0f,%.0f\n", str, record.Date.Unix(), record.Buy, record.Sell)
 	}
 
-	fh, err := os.Create("records.csv")
+	file, err := os.Create("records.csv")
 	if err != nil {
-		log.Fatalf("create recrods.csv has error, %s\n", err)
+		log.Fatal(err)
 	}
-	_, err = fh.WriteString(str)
+	n, err := file.Write([]byte(str))
 	if err != nil {
-		log.Fatalf("write file has error, %s", err)
+		log.Fatal(err)
 	}
+	log.Printf("Writing %d bytes.", n)
+
+	file.Close()
 }
