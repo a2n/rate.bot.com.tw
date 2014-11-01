@@ -15,20 +15,6 @@ type Record struct {
 	Sell float32
 }
 
-type ByDate []Record
-
-func (d ByDate) Len() int {
-	return len(d)
-}
-
-func (d ByDate) Swap(i, j int) {
-	d[i], d[j] = d[j], d[i]
-}
-
-func (d ByDate) Less(i, j int) bool {
-	return d[i].Date.Before(d[j].Date)
-}
-
 type Parser struct {
 	Content string
 }
