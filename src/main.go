@@ -60,12 +60,15 @@ func main() {
 	runtime.GOMAXPROCS(NCPU)
 	ch := make(chan string, math.MaxUint16)
 
-	date := time.Date(2000, time.Month(1), 1, 0, 0, 0, 0, time.UTC)
-	max := math.MaxUint16
+	date := time.Date(2004, time.Month(10), 1, 0, 0, 0, 0, time.UTC)
+	//max := math.MaxUint16
+	max := 20
 	for i := 0; i < max; i++ {
 		str := fmt.Sprintf("%04d%02d%02d", date.Year(), date.Month(), date.Day())
 		log.Printf("Getting %s\n", str)
-		ch <- get(str)
+		go func(str string) {
+			ch <- get(str)
+		}(str)
 		date = date.Add(time.Duration(24) * time.Hour)
 		if date.After(time.Now()) {
 		    close(ch)
