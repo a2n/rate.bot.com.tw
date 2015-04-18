@@ -1,19 +1,19 @@
 package main
 
 import (
+	"botGoldPrice"
 	"log"
 	"time"
-	"botGoldPrice"
 )
 
 func timer() {
 	ch := time.Tick(1 * time.Hour)
 	crawler := botGoldPrice.NewCrawler()
-	records := make([]botGoldPrice, )
+	records := make([]botGoldPrice.Record, 0)
 	for {
 		<-ch
 		htmls := crawler.GetOneDay(time.Now())
-		records = append(records, botGoldPrice.NewParser(html).Parse()...)
+		records = append(records, botGoldPrice.NewParser(htmls).Parse()...)
 	}
 }
 
